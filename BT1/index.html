@@ -129,12 +129,57 @@
           <a
             id="doiTuongMenuButton"
             class="btn btn-secondary dropdown-toggle"
-            href=""
+            href="#"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
             >Đối tượng</a
           >
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                data-id="0"
+                class="dropdown-item"
+                href="#"
+                onclick="selectObject(this)"
+                >Đối tượng không ưu tiên</a
+              >
+            </li>
+            <li>
+              <a
+                data-id="1"
+                class="dropdown-item"
+                href="#"
+                onclick="selectObject(this)"
+                >Đối tượng 1</a
+              >
+            </li>
+            <li>
+              <a
+                data-id="2"
+                class="dropdown-item"
+                href="#"
+                onclick="selectObject(this)"
+                >Đối tượng 2</a
+              >
+            </li>
+            <li>
+              <a
+                data-id="3"
+                class="dropdown-item"
+                href="#"
+                onclick="selectObject(this)"
+                >Đối tượng 3</a
+              >
+            </li>
+          </ul>
+        </div>
+        <button id="tinhKetQua" class="btn btn-dark">Kết Quả</button>
+      </div>
+      <div class="col-8">
+        <div id="hienThiKetQua" class="ketQua">
+          <h2>Tổng điểm:</h2>
+          <h2>Kết quả: <span class="bg-danger"></span></h2>
         </div>
       </div>
     </div>
@@ -149,5 +194,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
