@@ -5,19 +5,36 @@ const tien150Kw = 1100;
 const tienConLai = 1300;
 
 function tinhTienDien(soKw) {
-  let tongTien =
-    soKw * tien50Kw +
-    (soKw > 50 ? (soKw - 50) * (tien50KwKe - tien50Kw) : 0) +
-    (soKw > 100 ? (soKw - 100) * (tien100Kw - tien50KwKe) : 0) +
-    (soKw > 200 ? (soKw - 200) * (tien150Kw - tien100Kw) : 0) +
-    (soKw > 350 ? (soKw - 350) * (tienConLai - tien150Kw) : 0);
+  let tongTien = 0;
+
+  if (soKw <= 50) {
+    tongTien = soKw * tien50Kw;
+  } else if (soKw <= 100) {
+    tongTien = 50 * tien50Kw + (soKw - 50) * tien50KwKe;
+  } else if (soKw <= 200) {
+    tongTien = 50 * tien50Kw + 50 * tien50KwKe + (soKw - 100) * tien100Kw;
+  } else if (soKw <= 350) {
+    tongTien =
+      50 * tien50Kw +
+      50 * tien50KwKe +
+      100 * tien100Kw +
+      (soKw - 200) * tien150Kw;
+  } else {
+    tongTien =
+      50 * tien50Kw +
+      50 * tien50KwKe +
+      100 * tien100Kw +
+      150 * tien150Kw +
+      (soKw - 350) * tienConLai;
+  }
+
   return tongTien;
 }
 
 function hienThi(ten, tienDien) {
   document.getElementById("hienThiTienDien").innerHTML = `
-    <h2>Tên: ${ten}</h2>;
-  <h2> Tiền điện: ${tienDien}</h2>`;
+    <h2>Tên: ${ten}</h2>
+    <h2>Tiền điện: ${tienDien}</h2>`;
 }
 
 document.getElementById("tinhTienDien").onclick = function () {

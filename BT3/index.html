@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BT2</title>
+    <title>BT3</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -20,45 +20,59 @@
 
   <body>
     <div class="container w-50">
-      <h2 class="text-center">BT: Tính tiền điện</h2>
+      <h2 class="text-center">Bài tập: Tính thuế thu nhập cá nhân</h2>
       <div class="row">
-        <div class="col-6">
+        <div class="col-4">
           <div class="mb-3">
-            <label for="" class="form-label">Tên</label>
+            <label for="" class="form-label">Họ Tên</label>
             <input
               type="text"
               class="form-control"
               name=""
-              id="ten"
+              id="hoTen"
               aria-describedby="helpId"
-              placeholder="Nhập tên..."
-            />
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="mb-3">
-            <label for="" class="form-label">Số KW</label>
-            <input
-              type="text"
-              class="form-control"
-              name=""
-              id="soKw"
-              aria-describedby="helpId"
-              placeholder="Nhập số KW..."
+              placeholder="Nhập họ tên..."
             />
           </div>
         </div>
         <div class="col-4">
-          <button id="tinhTienDien" class="btn btn-dark">Tính tiền điện</button>
+          <div class="mb-3">
+            <label for="" class="form-label">Tổng thu nhập năm</label>
+            <input
+              type="text"
+              class="form-control"
+              name=""
+              id="tongThuNhapNam"
+              aria-describedby="helpId"
+              placeholder="Nhập tổng thu nhập năm..."
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="" class="form-label">Số người phụ thuộc</label>
+            <input
+              type="text"
+              class="form-control"
+              name=""
+              id="nguoiPhuThuoc"
+              aria-describedby="helpId"
+              placeholder="Nhập số người phụ thuộc..."
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <button id="tinhTienThue" class="btn btn-dark">Tính thuê</button>
         </div>
         <div class="col-8">
-          <div id="hienThiTienDien">
+          <div id="hienThiThue">
             <h2>Tên:</h2>
-            <h2>Tiền điện:</h2>
+            <h2>Tiền thuế phải trả:</h2>
           </div>
         </div>
       </div>
     </div>
+    <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -70,6 +84,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <script src="./index.js"></script>
+    <script src="/BT3/index.js"></script>
   </body>
 </html>
